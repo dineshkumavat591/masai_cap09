@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  .signup_container {
+    width: 300px;
+    padding: 20px;
+    background-color: #e75454;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(196, 85, 85, 0.1);
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: .5rem;
+  }
+  #btn {
+    background-color: #807fb8;
+    cursor: pointer;
+  }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- navbar start fron here -->
+    <div id="navbar">
+      <div id="nav1">
+        <div class="block1"><img src="./images/bb.png" alt=""></div>
+        <div class="block2"><input type="search" id="search_bar" placeholder="Search for Products.."> </div>
+        <div class="block3"><a href="./signup.html">Signup</a> OR <a href="./login.html">Login</a></div>
+        <div class="block3"><a href="./index.html">Home </a></div>
+        <div class="block3"><a href="./product.html">Product</a></div>
+        <div class="block3"><a href="./cart.html">My Cart</a></div>
+        <div class="block4"><img src="./images/basket.jpeg" alt=""></div>
+      </div>
+
+      <div id="nav2">
+          <button id="dropdown_list">Shop by Category</button>
+          <button id="">Exotic Fruits & Veggies</button>
+          <button id="">Tea</button>
+          <button id="">Ghee</button>
+          <button id="">Nandini</button>
+         
+      </div>
+  </div>
+  <!-- navbar end here -->
+  <br><br>
+
+<div class="signup_container">
+  <h2>Signup</h2>
+  <form id="form" >
+    <label>Email: </label>
+   <input type="text" placeholder="Email" id="email" required>
+   <br><br>
+   <label >Password: </label>
+   <input type="text" placeholder="Password" id="password" required>
+   <br><br>
+   <input type="submit" id="btn">
+  </form>
+</div>
+  
+  
+
+</body>
+</html>
+
+
+
+<script>
+  let form = document.getElementById("form");
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+
+
+form.addEventListener("submit", function(event){
+event.preventDefault();
+let userDetails = {
+   email : email.value,
+   password : password.value,
+}
+localStorage.setItem("userDetails", JSON.stringify(userDetails));
+
+});
+</script>

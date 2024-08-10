@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #fffdf5;
+        }
+
+        #total-signup-page {
+
+            width: 70%;
+            margin: auto;
+            height: 100vh;
+            display: flex;
+            background-color: #fffdf5;
+}
+   #total-signup-page .right-signup>div {
+
+            display: grid;
+            height: 75%;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: white;
+            padding: 2% 10%;
+
+        }
+ #total-signup-page .right-signup>div input {
+            height: 40px;
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+        }
+        #signup-btn:hover{
+            color: lightblue;
+            cursor: pointer;
+            scale: 1.1;
+        }
+
+        </style>
+       
+  </head>
+  <body>
+    <div id = "navbar"></div>
+    
+    <div id="total-signup-page">
+
+
+        <div class="left-signup">
+            <img src="https://images.bewakoof.com/web/desktop-sign-up-banner--1623760676.png" width="320px">
+        </div>
+        <div class="right-signup">
+
+
+            <div>
+                <h2> Already Have an Account please <button onclick="window.location.href='login.html'">Login</button> </h2>
+                <h2 style="text-align: center";cursor="pointer";>Sign Up</h2>
+                <h3>Hi new buddy, let's get you started with the bewakoofi!</h3>
+
+                <input class="fullname_input" type="text" placeholder="Full Name" required>
+                <label class="fullname"></label>
+                <input type="number" class="Mobile_input" placeholder="Mobile" required>
+                <label class="Mobile"></label>
+                <input type="email" class="email_input" placeholder="Email Id" required>
+                <label class="email"></label>
+                <input type="password" class="password_input" placeholder="Password" required>
+                <label class="password"></label><br>
+               
+                <button id="signup-btn"> PROCEED</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
